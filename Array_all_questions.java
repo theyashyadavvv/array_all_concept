@@ -130,6 +130,32 @@ class  second_largest_number{
                     largest= arrays;
                 }
             }
+
+            // finsing even number in array by using two methods
+            class even{
+                public static void even_number(){
+                    int arr[]={10,20,30};
+
+                    // first method
+                    for(int i =0; i<arr.length;i++){
+                        if(arr[i]%2==0){
+                            System.out.print(arr[i]);
+                        }
+                    }
+                    //second method
+                    int[] arr = {1, 2, 3, 4, 5};
+IntStream.of(arr).filter(n -> n % 2 == 0).forEach(System.out::println);
+                    // ?*********************************************explnation *****************************************
+                    /*
+                     IntStream.of(arr): Creates an IntStream from the array. An IntStream is a sequence of primitive int values.
+
+3. .filter(n -> n % 2 == 0): Applies a filter to the stream. The filter takes a lambda expression n -> n % 2 == 0, which checks if a number is even (i.e., divisible by 2). Only even numbers pass through the filter.
+
+4. .forEach(System.out::println): Applies a terminal operation to the filtered stream. The forEach method takes a lambda expression System.out::println, which prints each even number to the console.
+*/
+                }
+            }
+                    
         }
 //        System.out.println(max);
 //        for(int i = 0 ; i< arr.length; i++){
@@ -176,8 +202,10 @@ class swap{
 }
 public class Array_all_questions {
     public static void main(String args[]){
+        even obj8=new even();
+        obj8.even_number();
          swap obj7 = new swap();
-        obj7.swaping(10, 20);
+        // obj7.swaping(10, 20);
         second_largest_number obj6= new second_largest_number();
         // obj6.maximum_2();
 
